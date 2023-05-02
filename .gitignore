@@ -1,0 +1,9 @@
+.idea/*
+node_modules
+dist
+./.development.env
+
+apps/frontend/node_modules
+db-data
+.env
+.lock

@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+#main, #main-nav {
+  margin: 0px;
+  padding: 0px;
+}
+
+.flex {
+  display: flex;
+}
+
+.margin-left-5 {
+  margin-left: 5px;
+}
+
+.nav-profile {
+  max-height: 40px;
+  color: white;
+}
+
+.nav-profile img {
+  max-height: 40px;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

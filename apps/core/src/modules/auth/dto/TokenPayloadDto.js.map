@@ -1,0 +1,1 @@
+{"version":3,"file":"TokenPayloadDto.js","sourceRoot":"","sources":["TokenPayloadDto.ts"],"names":[],"mappings":"AAAA,YAAY,CAAC;;;;;;;;;;;AAEb,6CAAmD;AAEnD,MAAa,eAAe;IAO1B,YAAY,IAAgD;QAC1D,IAAI,CAAC,SAAS,GAAG,IAAI,CAAC,SAAS,CAAC;QAChC,IAAI,CAAC,WAAW,GAAG,IAAI,CAAC,WAAW,CAAC;IACtC,CAAC;CACF;AATC;IADC,0BAAgB,EAAE;;kDACD;AAGlB;IADC,0BAAgB,EAAE;;oDACC;AALtB,0CAWC"}

@@ -1,0 +1,40 @@
+{
+  "language": "ts",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/overwatch-core/src",
+  "monorepo": true,
+  "root": "apps/overwatch-core",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/overwatch-core/tsconfig.app.json"
+  },
+  "projects": {
+    "overwatch-core": {
+      "type": "application",
+      "root": "apps/overwatch-core",
+      "entryFile": "main",
+      "sourceRoot": "apps/overwatch-core/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/overwatch-core/tsconfig.app.json"
+      }
+    },
+    "overwatch-intercom": {
+      "type": "application",
+      "root": "apps/overwatch-intercom",
+      "entryFile": "main",
+      "sourceRoot": "apps/overwatch-intercom/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/core/tsconfig.app.json"
+      }
+    },
+    "overwatch-frontend": {
+      "type": "application",
+      "root": "overwatch-frontend",
+      "entryFile": "index",
+      "sourceRoot": "overwatch-frontend/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/core/tsconfig.app.json"
+      }
+    }
+  }
+}

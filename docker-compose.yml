@@ -1,0 +1,51 @@
+version: "3"
+services:
+  app:
+    stdin_open: true # without this node doesn't start
+    env_file:
+      - .development.env
+    container_name: Overwatch
+    restart: always
+    image: node
+    networks: 
+      - overnet
+    environment: 
+      DB_HOST: postgres
+      REDIS_HOST: redis
+    build: .
+    links:
+      - postgres
+      - redis
+    ports:
+      - "3000:3000"
+    volumes:
+    - ./overwatch-frontend:/usr/src/app
+    depends_on:
+      - postgres
+      - redis # "./wait_for_it.sh", "postgres:5432", "--",
+
+  postgres:
+    image: postgres
+    restart: always
+    env_file:
+      - .development.env
+    environment:
+      POSTGRES_HOST: "${POSTGRES_HOST}"
+      POSTGRES_PORT: "${POSTGRES_PORT}"
+      POSTGRES_USERNAME: "${POSTGRES_USERNAME}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DATABASE: "${POSTGRES_DATABASE}"
+      POSTGRES_SCHEMA: "${POSTGRES_SCHEMA}"
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+    networks: 
+      - overnet
+
+  redis:
+    image: redis
+    networks: 
+      - overnet
+networks: 
+  overnet:
