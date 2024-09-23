@@ -7,7 +7,8 @@ The system is built on using Typescript on the NestJS framework (which itself mo
 It includes features for both backend services and frontend interfaces and injests MQTT data.
 Was created as part of a security keypad authentication system originally and morphed into a more broad MQTT injestion and logging platform at which point it was also used it to
 log various sensor data from rasberry pi devices such as temp/humidity/wind sensors.
-Note An intercom component was started but NOT FINISHED!
+Note An intercom component was started but NOT FINISHED! Ditto for the Frontend poriton. 
+This project works as is, but can be considered in the Alpha stage. Essentially abandoned for the time being unless someone wants to collaborate on finishing this up with me.
 
 ## Core Features:
 Authentication: Users authenticate via email/password, and devices via unique pins, with JWT tokens for session security.
